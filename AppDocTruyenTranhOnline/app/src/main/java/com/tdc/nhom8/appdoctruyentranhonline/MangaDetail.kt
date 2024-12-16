@@ -12,6 +12,7 @@ class MangaDetail : AppCompatActivity() {
 
     private lateinit var titleTextView: TextView
     private lateinit var descriptionTextView: TextView
+    private lateinit var authorName: TextView
     private lateinit var coverImageView: ImageView
     private lateinit var btnBack: ImageView
 
@@ -27,6 +28,7 @@ class MangaDetail : AppCompatActivity() {
     private fun setControl() {
         titleTextView = findViewById(R.id.titleTextView)
         descriptionTextView = findViewById(R.id.txt_mota)
+        authorName = findViewById(R.id.authorNameDetail)
         coverImageView = findViewById(R.id.imageView)
         btnBack = findViewById(R.id.btnBack)
     }
@@ -35,6 +37,17 @@ class MangaDetail : AppCompatActivity() {
         val comicTitle = intent.getStringExtra("comic_title")
         val comicDescription = intent.getStringExtra("comic_description")
         val comicImageName = intent.getStringExtra("comic_image") // Lấy string name img
+
+        // Lấy đối tượng Parcelable `Author`
+        val author = intent.getParcelableExtra<Author>("author")
+
+        // Kiểm tra null và sử dụng dữ liệu từ `Author`
+        author?.let {
+
+             authorName.text = it.name
+
+
+    }
 
         //xự kiện quay lại
         btnBack.setOnClickListener{

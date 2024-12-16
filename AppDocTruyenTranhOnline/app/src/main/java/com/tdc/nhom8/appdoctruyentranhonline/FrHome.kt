@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tdc.nhom8.appdoctruyentranhonline.ComicAdapter
 import com.tdc.nhom8.appdoctruyentranhonline.ComicRecyclerViewAdapter
-import com.tdc.nhom8.appdoctruyentranhonline.Object.*
+import com.tdc.nhom8.appdoctruyentranhonline.Comic
 import com.tdc.nhom8.appdoctruyentranhonline.databinding.FragmentFrHomeBinding
 
 
@@ -80,15 +80,16 @@ class FrHome : Fragment() {
         comicListTopTuan = listOf(
             Comic("Item09", "Tokyo Ghoul", Author("Au009", "Ishida", "A ghoul's life and survival in Tokyo", "aau9"), 98.4, "cover_image_cm9", ""),
             Comic("Item10", "One Punch Man", Author("Au010", "Murata", "A hero who defeats anyone with a single punch", "aau10"), 112.3, "cover_image_cm10", ""),
-            Comic("Item11", "Demon Slayer", Author("Au011", "Koyoharu", "The fight against demons to save loved ones", "aau11"), 130.0, "cover_image_cm11", ""),
-            Comic("Item12", "Fairy Tail", Author("Au012", "Mashima", "A guild of mages embarking on epic adventures", "aau12"), 75.0, "cover_image_cm12", "")
+            Comic("Item16", "Hunter x Hunter", Author("Au016", "Togashi", "A young boy's journey to find his father", "aau16"), 140.3, "cover_image_cm16", ""),
+            Comic("Item11", "Demon Slayer", Author("Au011", "Koyoharu", "The fight against demons to save loved ones", "aau11"), 130.0, "cover_image_cm11", "")
         )
 
        comicListTopThang = listOf(
             Comic("Item13", "Fullmetal Alchemist", Author("Au013", "Arakawa", "Two brothers seek the Philosopher's Stone", "aau13"), 120.8, "cover_image_cm13", ""),
             Comic("Item14", "Death Note", Author("Au014", "Ohba", "A high school student discovers a deadly notebook", "aau14"), 110.2, "cover_image_cm14", ""),
             Comic("Item15", "Sword Art Online", Author("Au015", "Kawahara", "Trapped in a virtual world, players must survive", "aau15"), 85.4, "cover_image_cm15", ""),
-            Comic("Item16", "Hunter x Hunter", Author("Au016", "Togashi", "A young boy's journey to find his father", "aau16"), 140.3, "cover_image_cm16", "")
+           Comic("Item12", "Fairy Tail", Author("Au012", "Mashima", "A guild of mages embarking on epic adventures", "aau12"), 75.0, "cover_image_cm12", "")
+
         )
 
 
@@ -166,7 +167,7 @@ class FrHome : Fragment() {
         val intent = Intent(requireActivity(), MangaDetail::class.java).apply {
             putExtra("comic_title", comic.name)
             putExtra("comic_description", comic.description)
-            putExtra("comic_image", comic.cover_image) // Truyền URL hoặc ID tài nguyên của ảnh
+            putExtra("comic_image", comic.coverImage) // Truyền URL hoặc ID tài nguyên của ảnh
         }
         startActivity(intent)
     }

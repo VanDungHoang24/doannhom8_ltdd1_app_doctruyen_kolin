@@ -9,8 +9,9 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.tdc.nhom8.appdoctruyentranhonline.MangaDetail
-import com.tdc.nhom8.appdoctruyentranhonline.Object.*
+import com.tdc.nhom8.appdoctruyentranhonline.Comic
 import com.tdc.nhom8.appdoctruyentranhonline.R
+import java.io.Serializable
 
 class ComicAdapter(
     private val context: Context,
@@ -22,13 +23,15 @@ class ComicAdapter(
         val comic = comicList[position]
 
         val comicTitle: TextView = view.findViewById(R.id.tvTitileItem)
+        val comicAuthor: TextView = view.findViewById(R.id.tvAuItem)
         val comicImage: ImageView = view.findViewById(R.id.imgItem)
 
-        // Set tiêu đề
+        // Set tiêu đề comic
         comicTitle.text = comic.name
-
-        // Kiểm tra và đặt ảnh
-        val imageId = getDrawableId(context, comic.cover_image)
+        //set comicAuthor
+        comicAuthor.text=comic.author.name
+        // Kiểm tra và đặt ảnh comic
+        val imageId = getDrawableId(context, comic.coverImage)
         if (imageId != 0) {
             comicImage.setImageResource(imageId) // Sử dụng ảnh từ tài nguyên
         } else {
@@ -40,7 +43,8 @@ class ComicAdapter(
             val intent = Intent(context, MangaDetail::class.java).apply {
                 putExtra("comic_title", comic.name)
                 putExtra("comic_description", comic.description)
-                putExtra("comic_image", comic.cover_image)
+                putExtra("comic_image", comic.coverImage)
+                putExtra("author", comic.author)
             }
             context.startActivity(intent)
         }

@@ -1,6 +1,7 @@
 package com.tdc.nhom8.appdoctruyentranhonline
 
-import com.tdc.nhom8.appdoctruyentranhonline.Object.*
+import com.tdc.nhom8.appdoctruyentranhonline.Author
+import com.tdc.nhom8.appdoctruyentranhonline.Comic
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +28,7 @@ class SliderAdapter(
         holder.iAuthorName.text = item.author.name
 
         // Set image for comic cover
-        val imageResId = getDrawableId(holder.itemView.context, item.cover_image)
+        val imageResId = getDrawableId(holder.itemView.context, item.coverImage)
         holder.iCoverImage.setImageResource(imageResId.takeIf { it != 0 } ?: R.drawable.default_image)
 
         // Set on click listener for item

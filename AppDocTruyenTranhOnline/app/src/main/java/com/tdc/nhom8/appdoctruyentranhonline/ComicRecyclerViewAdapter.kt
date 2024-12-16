@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.tdc.nhom8.appdoctruyentranhonline.MangaDetail
-import com.tdc.nhom8.appdoctruyentranhonline.Object.*
+import com.tdc.nhom8.appdoctruyentranhonline.Comic
 import com.tdc.nhom8.appdoctruyentranhonline.R
 
 
@@ -19,6 +19,7 @@ class ComicRecyclerViewAdapter(
 
     class ComicViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val comicTitle: TextView = itemView.findViewById(R.id.item_name)
+        val comicAuthor: TextView = itemView.findViewById(R.id.authorName)
         val comicImage: ImageView = itemView.findViewById(R.id.item_cover_image)
     }
 
@@ -27,10 +28,14 @@ class ComicRecyclerViewAdapter(
         return ComicViewHolder(view)
     }
 
+    //gán vào comic_slider
     override fun onBindViewHolder(holder: ComicViewHolder, position: Int) {
         val comic = comicList[position]
         holder.comicTitle.text = comic.name
-        val imageId = context.resources.getIdentifier(comic.cover_image, "drawable", context.packageName)
+        holder.comicAuthor.text = comic.author.name
+
+
+        val imageId = context.resources.getIdentifier(comic.coverImage, "drawable", context.packageName)
         holder.comicImage.setImageResource(imageId)
 
         // Sự kiện click vào item
@@ -38,7 +43,8 @@ class ComicRecyclerViewAdapter(
             val intent = Intent(context, MangaDetail::class.java).apply {
                 putExtra("comic_title", comic.name)
                 putExtra("comic_description", comic.description)
-                putExtra("comic_image", comic.cover_image)
+                putExtra("comic_image", comic.coverImage)
+                putExtra("author", comic.author)
             }
             context.startActivity(intent)
         }

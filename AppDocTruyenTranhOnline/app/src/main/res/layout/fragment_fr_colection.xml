@@ -1,14 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FrColection">
+    android:orientation="vertical"
+    tools:context=".FrCollection">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/GroupHeader"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="fill_horizontal|bottom">
 
-</FrameLayout>
+        <!-- User avatar -->
+        <ImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/avatar_bolder"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop" />
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:gravity="bottom"
+            android:maxLines="2"
+            android:text="Welcome, User!"
+            android:textColor="#176049"
+            android:textStyle="bold"
+            android:layout_marginRight="15dp"
+            android:textSize="18sp" />
+
+        <!-- Notification icon -->
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/baseline_notifications_24" />
+
+        <!-- Shopping cart icon -->
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/baseline_add_shopping_cart_24" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:background="@drawable/search_bolder"
+            android:hint="Search Manga"
+            android:gravity="left|center"
+            android:paddingLeft="15dp" />
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/baseline_search_24"
+            android:layout_marginLeft="35dp" />
+    </LinearLayout>
+
+    <!-- Top Manga Section -->
+    <TextView
+        android:id="@+id/tvTopManga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:text="Your Colections"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:padding="10dp"
+        android:verticalSpacing="10dp" />
+</LinearLayout>

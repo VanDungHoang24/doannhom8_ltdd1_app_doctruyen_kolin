@@ -38,9 +38,9 @@
         android:text=""
         android:maxLength="135"
         android:maxLines="2"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
         android:paddingLeft="5dp"
         android:gravity="start"
-        android:textSize="8sp" />
+        android:textSize="10sp" />
 
 </LinearLayout>
