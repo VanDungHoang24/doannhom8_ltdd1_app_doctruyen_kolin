@@ -46,7 +46,7 @@
 
         <!-- Shopping cart icon -->
         <ImageView
-            android:id="@+id/cartIcon"
+            android:id="@+id/cartIconColection"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"

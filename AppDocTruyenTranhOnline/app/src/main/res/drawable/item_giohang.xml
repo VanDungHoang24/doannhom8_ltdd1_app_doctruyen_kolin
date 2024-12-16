@@ -1,0 +1,109 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/item_background"
+    android:gravity="center_vertical">
+
+    <!-- Hình ảnh truyện -->
+    <ImageView
+        android:id="@+id/imgTruyen"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_manga_onepiece"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/image_border" />
+
+    <!-- Chi tiết thông tin truyện -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Tên truyện -->
+        <TextView
+            android:id="@+id/tvTenTruyen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên truyện"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <!-- Tác giả -->
+        <TextView
+            android:id="@+id/tvTacGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tác giả"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <!-- Giá truyện -->
+        <TextView
+            android:id="@+id/tvGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá"
+            android:textSize="14sp"
+            android:textColor="#FF5722"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Số lượng -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+
+        <!-- Nút giảm -->
+        <Button
+            android:id="@+id/btnDecrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="-"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:background="@drawable/button_background" />
+
+        <!-- TextView để hiển thị số lượng -->
+        <TextView
+            android:id="@+id/tvSoLuong"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginHorizontal="10dp"/>
+
+        <!-- Nút tăng -->
+        <Button
+            android:id="@+id/btnIncrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:background="@drawable/button_background" />
+    </LinearLayout>
+
+    <!-- Checkbox để chọn -->
+    <CheckBox
+        android:id="@+id/cbChon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp" />
+</LinearLayout>

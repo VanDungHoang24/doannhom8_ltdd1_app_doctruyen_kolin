@@ -51,6 +51,30 @@
         <activity
             android:name=".BaoCaoActivity"
             android:exported="true" />
+
+        //Tùng Activity
+        <activity
+            android:name=".ShopTruyen"
+            android:exported="true" />
+
+        <activity
+            android:name=".ShopVip"
+            android:exported="true" />
+        <activity
+            android:name=".PhuongThucThanhToan"
+            android:exported="true" />
+
+        <activity
+            android:name=".QR"
+            android:exported="true" />
+
+        <activity
+            android:name=".ThanhToanThanhCong"
+            android:exported="true" />
+
+        <activity
+            android:name=".ThanhToanVIP"
+            android:exported="true" />
     </application>
 
 </manifest>

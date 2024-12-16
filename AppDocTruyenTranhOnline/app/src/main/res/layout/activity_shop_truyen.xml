@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="89dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Welcom"
+        android:textColor="#808080"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Sam Nguyen"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="2"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnGioHang"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shopping_cart" />
+
+
+    <ImageView
+        android:id="@+id/btnThongBao"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notification" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="17dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/ic_donvitien" />
+
+    <TextView
+        android:id="@+id/btnShopVIP"
+        android:layout_width="177dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="148dp"
+        android:layout_weight="1"
+        android:background="@drawable/radius_truyen"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="VIP"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_tabtruyen"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="148dp"
+        android:layout_weight="1"
+        android:background="@drawable/radius_vip"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Truyện"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+
+        android:layout_marginTop="44dp"
+        android:background="@drawable/radius_giohang"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShopVIP">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="14sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/radius"
+            android:maxHeight="40sp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_manga_onepiece" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:layout_marginTop="10sp"
+            android:text="One piece"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-90sp"
+            android:layout_marginTop="40sp"
+            android:text="Oda,Eiichiro..."
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-75sp"
+            android:layout_marginTop="70sp"
+            android:background="@drawable/radius_giohang"
+            android:text="Giá:38.000 VND"
+            android:textColor="#FF9800" />
+
+        <ImageView
+            android:id="@+id/btnAddShoppingCart1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20sp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            app:srcCompat="@drawable/shopping_cart" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+
+        android:layout_height="109dp"
+        android:layout_marginTop="172dp"
+        android:background="@drawable/radius_giohang"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShopVIP">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="14sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/radius"
+            android:maxHeight="40sp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_manga_sololeving" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:layout_marginTop="10sp"
+            android:text="Skill Level"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-90sp"
+            android:layout_marginTop="40sp"
+            android:text="Oda,Eiichiro..."
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-75sp"
+            android:layout_marginTop="70sp"
+            android:background="@drawable/radius_giohang"
+            android:text="Giá:38.000 VND"
+            android:textColor="#FF9800" />
+
+        <ImageView
+            android:id="@+id/btnAddShoppingCart2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20sp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            app:srcCompat="@drawable/shopping_cart" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/radius_giohang"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="14sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/radius"
+            android:maxHeight="40sp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_manga_quachanhvatiachop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:layout_marginTop="10sp"
+            android:text="Võ Luyên"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-90sp"
+            android:layout_marginTop="40sp"
+            android:text="Oda,Eiichiro..."
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-75sp"
+            android:layout_marginTop="70sp"
+            android:background="@drawable/radius_giohang"
+            android:text="Giá:38.000 VND"
+            android:textColor="#FF9800" />
+
+        <ImageView
+            android:id="@+id/btnAddShoppingCart4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20sp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            app:srcCompat="@drawable/shopping_cart" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/radius_giohang"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="14sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/radius"
+            android:maxHeight="40sp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_manga_hotsearchdudinh" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:layout_marginTop="10sp"
+            android:text="Skill Levlew"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-90sp"
+            android:layout_marginTop="40sp"
+            android:text="Oda,Eiichiro..."
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-75sp"
+            android:layout_marginTop="70sp"
+            android:background="@drawable/radius_giohang"
+            android:text="Giá:38.000 VND"
+            android:textColor="#FF9800" />
+
+        <ImageView
+            android:id="@+id/btnAddShoppingCart3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20sp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            app:srcCompat="@drawable/shopping_cart" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

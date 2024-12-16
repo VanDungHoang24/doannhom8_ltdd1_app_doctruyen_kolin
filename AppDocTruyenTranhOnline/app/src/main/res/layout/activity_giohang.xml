@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="81dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="7sp"
+            app:srcCompat="@drawable/baseline_chevron_left_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:text="Giỏ Hàng"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <!-- RecyclerView hiển thị danh sách truyện -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Khu vực tổng thanh toán -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tvTongTien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tổng Thanh Toán: 0 VND"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:paddingEnd="8dp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Nút thanh toán -->
+    <Button
+        android:id="@+id/btnThanhToan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THANH TOÁN"
+        android:textStyle="bold"
+        android:background="@color/teal_200"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:gravity="center" />
+</LinearLayout>
