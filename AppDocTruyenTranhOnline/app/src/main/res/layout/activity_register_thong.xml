@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="357dp"
+        android:layout_height="257dp"
+        android:layout_gravity="center"
+        android:translationY="50dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/radius"
+        android:clipToOutline="true"
+        app:srcCompat="@drawable/img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/edtGmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#362196F3"
+            android:hint=" Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint=" Password"
+            android:background="#362196F3"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            />
+        <ImageView
+            android:id="@+id/IMG_hienthi"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/open_password"
+            android:layout_gravity="end"
+            android:background="#362196F3"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/edtComfirmPassword"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint=" Confirm Password"
+            android:background="#362196F3"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            />
+        <ImageView
+            android:id="@+id/IMG_hienthi2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/open_password"
+            android:background="#362196F3"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:id="@+id/tvQuayLai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quay lai"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tvDangNhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginLeft="118dp"
+            android:textStyle="italic" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnDangKy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:text="Đăng Kí"
+        android:background="@drawable/radius_dangnhap"
+        android:textColorHint="@color/black"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="40dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tuyện tranh online"
+            android:textAlignment="center"
+            android:textColor="#3A5FCD"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

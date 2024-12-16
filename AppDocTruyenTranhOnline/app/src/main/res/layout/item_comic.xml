@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutItemList"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/radius_search"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <ImageView
+            android:id="@+id/imgItem"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:background="@drawable/radius_search" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutItemDetail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/tvTitileItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ComicName"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/tvAuItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Author name"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/tvChapItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chapter Count"
+                android:textSize="14sp"
+                android:textColor="#ff6905"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

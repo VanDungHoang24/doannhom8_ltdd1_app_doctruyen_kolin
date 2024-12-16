@@ -1,0 +1,46 @@
+<!-- item_slider.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="180dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/item_border"
+    android:layout_gravity="center|top"
+    android:padding="4dp"
+    android:layout_margin="4dp"
+    >
+
+    <ImageView
+        android:id="@+id/item_cover_image"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:text=""
+        android:maxLength="125"
+        android:maxLines="2"
+        android:textStyle="italic|bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="5dp"
+        android:gravity="start"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/authorName"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:text=""
+        android:maxLength="135"
+        android:maxLines="2"
+        android:textStyle="italic"
+        android:paddingLeft="5dp"
+        android:gravity="start"
+        android:textSize="8sp" />
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cus_bg_name">#80F9F9F9</color>
+    <color name="selectedColor">#009688</color> <!-- Color when button is selected -->
+    <color name="defaultColor">#FF4081</color> <!-- Default color for buttons -->
+</resources>
