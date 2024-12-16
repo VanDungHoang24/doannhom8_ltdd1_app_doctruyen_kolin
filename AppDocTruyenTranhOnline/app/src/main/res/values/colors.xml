@@ -5,4 +5,10 @@
     <color name="cus_bg_name">#80F9F9F9</color>
     <color name="selectedColor">#009688</color> <!-- Color when button is selected -->
     <color name="defaultColor">#FF4081</color> <!-- Default color for buttons -->
+
+    <color name="teal_200">#03DAC5</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="teal_700">#018786</color>
+  >
 </resources>

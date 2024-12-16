@@ -38,6 +38,12 @@ class AdminHomeActivity : AppCompatActivity() {
 //            val intent = Intent(this, AdminMangaActivity::class.java)
 //            startActivity(intent)
 //        }
+        //chuyen qua trang quan ly doanh thu
+        btnQuanLyDoanhThu.setOnClickListener{
+            val intent = Intent(this, QuanLyDoanhThuActivity::class.java)
+            startActivity(intent)
+        }
+
         btnDangXuat.setOnClickListener{
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
