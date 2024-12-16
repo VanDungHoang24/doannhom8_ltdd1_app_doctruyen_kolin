@@ -1,6 +1,7 @@
 package com.tdc.nhom8.appdoctruyentranhonline
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -12,6 +13,7 @@ class MangaDetail : AppCompatActivity() {
     private lateinit var titleTextView: TextView
     private lateinit var descriptionTextView: TextView
     private lateinit var coverImageView: ImageView
+    private lateinit var btnBack: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +28,23 @@ class MangaDetail : AppCompatActivity() {
         titleTextView = findViewById(R.id.titleTextView)
         descriptionTextView = findViewById(R.id.txt_mota)
         coverImageView = findViewById(R.id.imageView)
+        btnBack = findViewById(R.id.btnBack)
     }
 
     private fun setEvent() {
         val comicTitle = intent.getStringExtra("comic_title")
         val comicDescription = intent.getStringExtra("comic_description")
         val comicImageName = intent.getStringExtra("comic_image") // Lấy string name img
+
+        //xự kiện quay lại
+        btnBack.setOnClickListener{
+            val intent = Intent(this,Home::class.java)
+            startActivity(intent)
+        }
+
+
+
+
 
         // Cập nhật tiêu đề và mô tả
         titleTextView.text = comicTitle ?: "Tên truyện không xác định"

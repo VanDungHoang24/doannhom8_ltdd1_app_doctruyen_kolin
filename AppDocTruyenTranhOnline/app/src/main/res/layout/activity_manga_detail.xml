@@ -9,6 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
        >
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="37dp"
+            android:src="@drawable/baseline_chevron_left_24"
+            android:contentDescription="@string/back_button" />
+
         <!-- Ảnh bìa -->
         <ImageView
             android:id="@+id/imageView"

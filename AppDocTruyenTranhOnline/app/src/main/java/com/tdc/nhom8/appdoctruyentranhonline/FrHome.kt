@@ -31,10 +31,11 @@ class FrHome : Fragment() {
 
 
     private lateinit var binding: FragmentFrHomeBinding
-    private var comicList: List<Comic> = listOf()
-//    private var comicListTopTuan: List<Comic> = listOf()
-//    private var comicListTopTuan: List<Comic> = listOf()
-//    private var comicListTopTuan: List<Comic> = listOf()
+    private   var comicList: List<Comic> = listOf()
+    private   var comicListTopTuan: List<Comic> = listOf()
+    private   var comicListTopThang: List<Comic> = listOf()
+    private   var comicListTopNam: List<Comic> = listOf()
+
 
     private var userAvatarID: Int = 0
     private lateinit var user1: User
@@ -72,18 +73,18 @@ class FrHome : Fragment() {
             comicList = listOf(
                 Comic("Item01", "Detective Conan Movie 27", Author("Au001", "Honda", "Lorem ipsum", "aau1"), 99.9, "cover_image_cm1", ""),
                 Comic("Item02", "Daemon", Author("Au002", "Yamaha", "Placeat consectetur", "aau2"), 88.8, "cover_image_cm2", ""),
-                Comic("Item03", "Dragon Ball Super", Author("Au003", "Suzuki Tokyo", "Amet consectetur", "aau3"), 77.7, "default_image", ""),
+                Comic("Item03", "Thỏ 7 màu", Author("Au003", "Nguyễn Nguyên Ngọc", "Amet consectetur", "aau3"), 77.7, "tho7mau", ""),
                 Comic("Item04", "One Piece", Author("Au004", "Kataminano", "Consectetur doloribus", "aau4"), 66.6, "cover_image_cm4", "")
             )
 
-        val comicListTopTuan = listOf(
+        comicListTopTuan = listOf(
             Comic("Item09", "Tokyo Ghoul", Author("Au009", "Ishida", "A ghoul's life and survival in Tokyo", "aau9"), 98.4, "cover_image_cm9", ""),
             Comic("Item10", "One Punch Man", Author("Au010", "Murata", "A hero who defeats anyone with a single punch", "aau10"), 112.3, "cover_image_cm10", ""),
             Comic("Item11", "Demon Slayer", Author("Au011", "Koyoharu", "The fight against demons to save loved ones", "aau11"), 130.0, "cover_image_cm11", ""),
             Comic("Item12", "Fairy Tail", Author("Au012", "Mashima", "A guild of mages embarking on epic adventures", "aau12"), 75.0, "cover_image_cm12", "")
         )
 
-        val comicListTopThang = listOf(
+       comicListTopThang = listOf(
             Comic("Item13", "Fullmetal Alchemist", Author("Au013", "Arakawa", "Two brothers seek the Philosopher's Stone", "aau13"), 120.8, "cover_image_cm13", ""),
             Comic("Item14", "Death Note", Author("Au014", "Ohba", "A high school student discovers a deadly notebook", "aau14"), 110.2, "cover_image_cm14", ""),
             Comic("Item15", "Sword Art Online", Author("Au015", "Kawahara", "Trapped in a virtual world, players must survive", "aau15"), 85.4, "cover_image_cm15", ""),
@@ -91,7 +92,7 @@ class FrHome : Fragment() {
         )
 
 
-        val comicListTopNam = listOf(
+        comicListTopNam = listOf(
             Comic("Item17", "JoJo's Bizarre Adventure", Author("Au017", "Araki", "A supernatural adventure across generations", "aau17"), 145.5, "cover_image_cm17", ""),
             Comic("Item18", "Attack on Titan", Author("Au018", "Isayama", "The war against titans continues", "aau18"), 155.6, "cover_image_cm18", ""),
             Comic("Item19", "One Piece", Author("Au019", "Oda", "The journey for the ultimate treasure", "aau19"), 200.1, "cover_image_cm19", ""),
@@ -112,22 +113,25 @@ class FrHome : Fragment() {
             tvWelcome.text = user1.name
         }
 
-// Thiết lập ListView
+    // Thiết lập defaul ListView
+        val listViewAdapter = ComicAdapter(requireContext(), comicListTopTuan)
+        listView.adapter = listViewAdapter
+        handleButtonClick(btnTuan)
 
         // Button click event handling
         btnTuan.setOnClickListener {
             handleButtonClick(btnTuan)
-            val listViewAdapter = ComicAdapter(requireContext(), comicList)
+            val listViewAdapter = ComicAdapter(requireContext(), comicListTopTuan)
             listView.adapter = listViewAdapter
         }
         btnThang.setOnClickListener {
             handleButtonClick(btnThang)
-            val listViewAdapter = ComicAdapter(requireContext(), comicList)
+            val listViewAdapter = ComicAdapter(requireContext(), comicListTopThang)
             listView.adapter = listViewAdapter
         }
         btnNam.setOnClickListener {
             handleButtonClick(btnNam)
-            val listViewAdapter = ComicAdapter(requireContext(), comicList)
+            val listViewAdapter = ComicAdapter(requireContext(), comicListTopNam)
             listView.adapter = listViewAdapter
         }
 
