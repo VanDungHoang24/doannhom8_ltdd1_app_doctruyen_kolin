@@ -39,6 +39,8 @@
             <!-- Nếu cần, bạn có thể thêm các intent-filter ở đây -->
         </activity>
 
+
+        //Admin Feature
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="true" />
@@ -51,6 +53,13 @@
         <activity
             android:name=".BaoCaoActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".AdminMangaMangaActivity"
+            android:exported="true" />
+
+
+
     </application>
 
 </manifest>

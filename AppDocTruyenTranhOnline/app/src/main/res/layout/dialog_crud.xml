@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Input tên truyện -->
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên truyện"
+        android:inputType="text"
+        android:padding="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Input thể loại -->
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Thể loại"
+        android:inputType="text"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Input trạng thái -->
+    <EditText
+        android:id="@+id/etStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Trạng thái"
+        android:inputType="text"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text" />
+</LinearLayout>

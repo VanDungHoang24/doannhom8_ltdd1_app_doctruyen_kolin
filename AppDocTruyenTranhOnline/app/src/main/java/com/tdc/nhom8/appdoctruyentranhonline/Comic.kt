@@ -10,5 +10,6 @@ import kotlinx.parcelize.Parcelize
         var author: Author,
         var price: Double,
         var coverImage: String,
+
         var description: String
     ) : Parcelable

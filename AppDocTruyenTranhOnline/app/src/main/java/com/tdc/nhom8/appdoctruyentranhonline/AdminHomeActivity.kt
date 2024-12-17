@@ -34,10 +34,12 @@ class AdminHomeActivity : AppCompatActivity() {
     }
 
     private fun setEvent(){
-//        btnQuanLyTruyen.setOnClickListener{
-//            val intent = Intent(this, AdminMangaActivity::class.java)
-//            startActivity(intent)
-//        }
+
+        //chuyen qua trang quan ly Truyen
+        btnQuanLyTruyen.setOnClickListener{
+            val intent = Intent(this, AdminMangaMangaActivity::class.java)
+            startActivity(intent)
+        }
         //chuyen qua trang quan ly doanh thu
         btnQuanLyDoanhThu.setOnClickListener{
             val intent = Intent(this, QuanLyDoanhThuActivity::class.java)
