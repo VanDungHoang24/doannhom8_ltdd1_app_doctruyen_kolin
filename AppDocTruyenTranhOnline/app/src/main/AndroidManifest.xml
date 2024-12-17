@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDocTruyenTranhOnline"
         tools:targetApi="31">
+
+<!--        Login Feature -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -23,6 +25,8 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
+
+<!--        Home chính-->
         <activity
             android:name=".Home"
             android:exported="true" />
@@ -35,12 +39,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+<!--        Manga detail-->
         <activity android:name=".MangaDetail">
-            <!-- Nếu cần, bạn có thể thêm các intent-filter ở đây -->
+
         </activity>
 
 
-        //Admin Feature
+<!--        Admin Feature-->
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="true" />
@@ -56,6 +62,9 @@
 
         <activity
             android:name=".AdminMangaMangaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminMangaTheLoaiActivity"
             android:exported="true" />
 
 
